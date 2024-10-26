@@ -87,8 +87,10 @@ function countries() {
         <div className="countries-container">
             <div className="countries-filter-container">
                 <div className="countries-search-container">
-                    <img src={darkMode ? searchIconWhite : searchIcon} />
+                    <img alt="search icon" src={darkMode ? searchIconWhite : searchIcon} />
                     <input
+                        id="searchInput"
+                        name="search-input"
                         type="text"
                         placeholder="Search for a country..."
                         value={filter}
@@ -96,7 +98,7 @@ function countries() {
                     />
                 </div>
                 <div className="countries-dropdown-menu-container">
-                    <button onClick={handleDropDown} data-dropdown="false" className="countries-dropdown-menu-btn">{radioToggle ? filterByRegion.toUpperCase() : "Filter by Region"}<img src={darkMode ? chevronWhite : chevron} /></button>
+                    <button onClick={handleDropDown} data-dropdown="false" className="countries-dropdown-menu-btn">{radioToggle ? filterByRegion.toUpperCase() : "Filter by Region"}<img alt="Filter option icon" src={darkMode ? chevronWhite : chevron} /></button>
                     {isDropDown && <div className="countries-dropdown-menu-list">
                         <label htmlFor="Africa">Africa</label>
                         <input

@@ -8,7 +8,7 @@ function header() {
   return (
     <div className="header-container">
       <h1>Where in tha world?</h1>
-      <button onClick={toggleMode}><img src={darkMode ? moonSharp : moonIcon}/>Dark mode</button>
+      <button onClick={toggleMode}><img alt="moon icon" src={darkMode ? moonSharp : moonIcon}/>Dark mode</button>
     </div>
   )
 }

@@ -9,7 +9,7 @@ function card({c, onClickCountry}: cardProps) {
     return (
         <div className="countries-list-card" onClick={() => onClickCountry(c)}>
             <div className="countries-list-card-image-container">
-                <img src={c.flags.png} />
+                <img alt={`${c.name.common} flag`} src={c.flags.png} />
             </div>
             <div className="countries-list-card-info-container">
                 <h1>{c.name.common}</h1>

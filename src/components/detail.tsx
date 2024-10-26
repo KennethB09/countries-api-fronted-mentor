@@ -15,13 +15,13 @@ function detail({ country, setCountry }: detailProps) {
   const language = languages.length > 0 ? languages.join(", ") : 'N/A';
   return (
     <div className="detail-container">
-      <button onClick={() => setCountry(null)}><img src={darkMode ? arrowBackWhite : arrowBack} /> Back</button>
+      <button onClick={() => setCountry(null)}><img alt="back button" src={darkMode ? arrowBackWhite : arrowBack} /> Back</button>
       <div className="detail-section-container">
 
-        <img src={country?.flags.png} />
+        <img src={country?.flags.png} alt={`${country?.name.common} flag`} />
 
         <div className="detail-section-1-2-3-container">
-          <h1>{country?.name.common}</h1>
+          <h1 className="detail-section-country-name">{country?.name.common}</h1>
 
           <div className="detail-section-1">
             <p><span>Population: </span>{country?.population}</p>
